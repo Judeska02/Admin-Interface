@@ -1,10 +1,10 @@
-﻿@model IEnumerable<DataAccessLayer.Models.Customer>
+﻿@model IEnumerable<DataAccessLayer.Models.Part>
 
 @{
     ViewData["Title"] = "Index";
 }
 
-<h1>Customers</h1>
+<h1>Parts</h1>
 
 <p>
     <a asp-action="Create">Create New</a>
@@ -16,10 +16,7 @@
                 @Html.DisplayNameFor(model => model.Name)
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.Address)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Active)
+                @Html.DisplayNameFor(model => model.Description)
             </th>
             <th></th>
         </tr>
@@ -31,10 +28,7 @@
                 @Html.DisplayFor(modelItem => item.Name)
             </td>
             <td>
-                @Html.DisplayFor(modelItem => item.Address)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Active)
+                @Html.DisplayFor(modelItem => item.Description)
             </td>
             <td>
                 <a asp-action="Edit" asp-route-id="@item.Id">Edit</a> |
